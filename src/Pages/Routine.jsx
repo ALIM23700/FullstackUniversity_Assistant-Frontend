@@ -7,11 +7,13 @@ const Routine = () => {
     const token = localStorage.getItem("token");
 
     fetch("http://localhost:3000/api/getroutine", {
-     
+      headers: {
+        Authorization: `Bearer ${token}`, 
+      },
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.newroutine);
+        console.log(data.newroutine); 
         setRoutine(data.newroutine);
       })
       .catch((err) => console.error(err));
