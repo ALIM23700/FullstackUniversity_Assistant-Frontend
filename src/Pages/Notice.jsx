@@ -1,9 +1,55 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 
 const Notice = () => {
-  return (
-    <div>Notice</div>
-  )
-}
+  const [classes, setClasses] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-export default Notice
+  useEffect(() => {
+    const fetchApprovedClasses = async () => {
+      try {
+        const res = await fetch("http://localhost:3000/api/all");
+        const data = await res.json();
+
+        console.log("All classes:", data);
+
+        const approvedClasses = data.filter((c) => c.approved);
+        setClasses(approvedClasses);
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchApprovedClasses();
+  }, []);
+
+  return (
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4 text-center">
+        Notice Board
+      </h1>
+
+      {loading ? (
+        <p className="text-center">Loading...</p>
+      ) : classes.length > 0 ? (
+        <ul>
+          {classes.map((c) => (
+            <li
+              key={c._id}
+              className="border p-2 my-1 rounded shadow-sm bg-white"
+            >
+              {c.day} - {c.subject} - {c.department} - {c.place} - {c.time}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-gray-500 italic">
+          No approved classes yet.
+        </p>
+      )}
+    </div>
+  );
+};
+
+export default Notice;
