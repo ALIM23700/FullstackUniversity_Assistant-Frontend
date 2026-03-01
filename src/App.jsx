@@ -11,6 +11,7 @@ import Register from './Pages/Register';
 import Login from './Pages/Login';
 import PrivateRoute from './Components/PrivateRoute';
 import Nav from './Components/Nav';
+import Admin from './Pages/Admin';
 
 function App() {
   return (
@@ -83,6 +84,14 @@ function App() {
           element={
             <PrivateRoute>
               <Notice />
+            </PrivateRoute>
+          }
+        />
+         <Route
+          path="/admin"
+          element={
+            <PrivateRoute>
+             <Admin></Admin>
             </PrivateRoute>
           }
         />
