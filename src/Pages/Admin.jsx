@@ -18,7 +18,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchClasses = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/today");
+        const res = await fetch("https://fullstackuniversity-assistant-backend-1.onrender.com/api/today");
         const data = await res.json();
         setClasses(data);
       } catch (err) {
@@ -30,7 +30,7 @@ const Admin = () => {
 
   const handleApprove = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/approve/${id}`, { method: "PUT" });
+      const res = await fetch(`https://fullstackuniversity-assistant-backend-1.onrender.com/api/approve/${id}`, { method: "PUT" });
       const data = await res.json();
       setClasses(classes.map((c) => (c._id === id ? data : c)));
     } catch (err) {
@@ -40,7 +40,7 @@ const Admin = () => {
 
   const handleCancel = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/cancel/${id}`, { method: "PUT" });
+      const res = await fetch(`https://fullstackuniversity-assistant-backend-1.onrender.com/api/cancel/${id}`, { method: "PUT" });
       const data = await res.json();
       setClasses(classes.map((c) => (c._id === id ? data : c)));
     } catch (err) {
@@ -73,7 +73,7 @@ const Admin = () => {
 
   const fetchClassTest = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/getclasstest", { headers: { Authorization: `Bearer ${token}` } });
+      const res = await fetch("https://fullstackuniversity-assistant-backend-1.onrender.com/api/getclasstest", { headers: { Authorization: `Bearer ${token}` } });
       const data = await res.json();
       setClasstest(data.newgetclasstest || []);
     } catch (error) {
@@ -83,7 +83,7 @@ const Admin = () => {
 
   const fetchAssignment = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/getassignment", { headers: { Authorization: `Bearer ${token}` } });
+      const res = await fetch("https://fullstackuniversity-assistant-backend-1.onrender.com/api/getassignment", { headers: { Authorization: `Bearer ${token}` } });
       const data = await res.json();
       setAssignment(data.newgetassignment || []);
     } catch (error) {
@@ -93,7 +93,7 @@ const Admin = () => {
 
   const fetchRoutine = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/getroutine", { headers: { Authorization: `Bearer ${token}` } });
+      const res = await fetch("https://fullstackuniversity-assistant-backend-1.onrender.com/api/getroutine", { headers: { Authorization: `Bearer ${token}` } });
       const data = await res.json();
       setRoutine(data.newroutine || []);
     } catch (error) {
@@ -111,8 +111,8 @@ const Admin = () => {
     e.preventDefault();
     try {
       const url = editClassId
-        ? `http://localhost:3000/api/updateclasstest/${editClassId}`
-        : "http://localhost:3000/api/classtest";
+        ? `https://fullstackuniversity-assistant-backend-1.onrender.com/api/updateclasstest/${editClassId}`
+        : "https://fullstackuniversity-assistant-backend-1.onrender.com/api/classtest";
       const method = editClassId ? "PUT" : "POST";
 
       const res = await fetch(url, {
@@ -137,8 +137,8 @@ const Admin = () => {
     e.preventDefault();
     try {
       const url = editAssignId
-        ? `http://localhost:3000/api/updateassignment/${editAssignId}`
-        : "http://localhost:3000/api/assignment";
+        ? `https://fullstackuniversity-assistant-backend-1.onrender.com/api/updateassignment/${editAssignId}`
+        : "https://fullstackuniversity-assistant-backend-1.onrender.com/api/assignment";
       const method = editAssignId ? "PUT" : "POST";
 
       const res = await fetch(url, {
@@ -163,8 +163,8 @@ const Admin = () => {
     e.preventDefault();
     try {
       const url = editRoutineId
-        ? `http://localhost:3000/api/deleteroutine/${editRoutineId}`
-        : "http://localhost:3000/api/routine";
+        ? `https://fullstackuniversity-assistant-backend-1.onrender.com/api/deleteroutine/${editRoutineId}`
+        : "https://fullstackuniversity-assistant-backend-1.onrender.com/api/routine";
       const method = editRoutineId ? "PUT" : "POST";
 
       const res = await fetch(url, {
@@ -189,9 +189,9 @@ const Admin = () => {
   const editAssignment = (post) => { setAssignSubject(post.SubjectName); setAssignTopic(post.TopicName); setAssignDepartment(post.Department); setAssignBatch(post.Batch); setDeadline(post.Deadline); setAssignTime(post.Time); setEditAssignId(post._id); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const editRoutine = (post) => { setRoutineImage(post.image); setEditRoutineId(post._id); window.scrollTo({ top: 0, behavior: "smooth" }); };
 
-  const deleteClass = async (id) => { if (!window.confirm("Are you sure?")) return; await fetch(`http://localhost:3000/api/deleteclasstest/${id}`, { method: "DELETE", headers: { Authorization: `Bearer ${token}` } }); fetchClassTest(); };
-  const deleteAssignment = async (id) => { if (!window.confirm("Are you sure?")) return; await fetch(`http://localhost:3000/api/deleteassignment/${id}`, { method: "DELETE", headers: { Authorization: `Bearer ${token}` } }); fetchAssignment(); };
-  const deleteRoutine = async (id) => { if (!window.confirm("Are you sure?")) return; await fetch(`http://localhost:3000/api/deleteroutine/${id}`, { method: "DELETE", headers: { Authorization: `Bearer ${token}` } }); fetchRoutine(); };
+  const deleteClass = async (id) => { if (!window.confirm("Are you sure?")) return; await fetch(`https://fullstackuniversity-assistant-backend-1.onrender.com/api/deleteclasstest/${id}`, { method: "DELETE", headers: { Authorization: `Bearer ${token}` } }); fetchClassTest(); };
+  const deleteAssignment = async (id) => { if (!window.confirm("Are you sure?")) return; await fetch(`https://fullstackuniversity-assistant-backend-1.onrender.com/api/deleteassignment/${id}`, { method: "DELETE", headers: { Authorization: `Bearer ${token}` } }); fetchAssignment(); };
+  const deleteRoutine = async (id) => { if (!window.confirm("Are you sure?")) return; await fetch(`https://fullstackuniversity-assistant-backend-1.onrender.com/api/deleteroutine/${id}`, { method: "DELETE", headers: { Authorization: `Bearer ${token}` } }); fetchRoutine(); };
 
   return (
     <div className="p-4 sm:p-5">

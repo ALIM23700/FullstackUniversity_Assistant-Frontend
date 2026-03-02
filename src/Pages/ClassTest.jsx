@@ -6,7 +6,7 @@ const ClassTest = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:3000/api/getclasstest", {
+    fetch("https://fullstackuniversity-assistant-backend-1.onrender.com/api/getclasstest", {
       headers: {
         "Authorization": `Bearer ${token}`
       }

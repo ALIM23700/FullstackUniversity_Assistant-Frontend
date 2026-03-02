@@ -7,7 +7,7 @@ const Notice = () => {
   useEffect(() => {
     const fetchApprovedClasses = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/all");
+        const res = await fetch("https://fullstackuniversity-assistant-backend-1.onrender.com/api/all");
         const data = await res.json();
 
         console.log("All classes:", data);

@@ -8,7 +8,7 @@ const Resources = () => {
 
   const fetchResources = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/getresource", {
+      const res = await fetch("https://fullstackuniversity-assistant-backend-1.onrender.com/api/getresource", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -28,7 +28,7 @@ const Resources = () => {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:3000/api/upload", {
+      const res = await fetch("https://fullstackuniversity-assistant-backend-1.onrender.com/api/upload", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
@@ -53,7 +53,7 @@ const Resources = () => {
   const handleDownload = async (filename) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/download/${filename}`,
+        `https://fullstackuniversity-assistant-backend-1.onrender.com/api/download/${filename}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

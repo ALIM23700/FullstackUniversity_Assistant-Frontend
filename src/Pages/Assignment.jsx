@@ -14,7 +14,7 @@ const Assignment = () => {
       }
 
       try {
-        const res = await fetch("http://localhost:3000/api/getassignment", {
+        const res = await fetch("https://fullstackuniversity-assistant-backend-1.onrender.com/api/getassignment", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
