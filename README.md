@@ -89,7 +89,7 @@ npm run dev
 
 http://localhost:5173/
 
-📁 Project Structure
+#📁 Project Structure
 
 src/
 ├─ app/ → Redux state management & Backend API URL
@@ -97,7 +97,7 @@ src/
 ├─ pages/ → Home, Assignment, ClassTest, CGPA, Notice, Admin pages
 App.js → Main router & page rendering
 
-🚀 Future Improvements
+#🚀 Future Improvements
 
 Integrate unit and integration tests
 Enhance performance & lazy load images
@@ -105,6 +105,6 @@ Improve admin panel functionality
 Add notifications/email reminders
 Add multilingual support
 
-📄 License
+#📄 License
 
 You are free to use, modify, and distribute this project.
