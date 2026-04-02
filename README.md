@@ -9,7 +9,7 @@ Supports role-based authentication, viewing upcoming classes, assignments, resou
 [Click here to view the live app](https://fullstack-university-assistant-fron.vercel.app/)
 ---
 ### ⚙️ Backend
-[Backend Repo](https://github.com/ALIM23700/FullstackEcommers_Backend)
+[Backend Repo](https://github.com/ALIM23700/FullstackUniversity_Assistant-Backend)
 
 ---
 
