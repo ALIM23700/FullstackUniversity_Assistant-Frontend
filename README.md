@@ -1,17 +1,110 @@
-# React + Vite
+# University Assistant Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Tailwind CSS frontend for the **University Assistant** full-stack web application.  
+Supports role-based authentication, viewing upcoming classes, assignments, resources, CGPA calculation, and admin/teacher management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
+[Click here to view the live app](https://fullstack-university-assistant-fron.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📸 Screenshots
 
-## Expanding the ESLint configuration
+### Home Page
+![Home](screenshots/Home.png)  
+*Dashboard showing upcoming classes and notices*
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# FullstackUniversity_Assistant-Frontend" 
+### Class Test
+![Class Test](screenshots/Classtest.png)  
+*View and track class tests*
+
+### Assignment
+![Assignment](screenshots/Assignment.png)  
+*View and download assignments*
+
+### Routine
+![Routine](screenshots/routine.png)  
+*Weekly class routine*
+
+### Resource
+![Resource](screenshots/resource.png)  
+*Download academic resources*
+
+### CGPA Calculator
+![CGPA Calculator](screenshots/cgpa-cal.png)  
+*Calculate your CGPA easily*
+
+### Next Day Notice
+![Next Day Notice](screenshots/notice.png)  
+*Automatically updated notice for next day class*
+
+### Admin Dashboard
+![Admin Overview](screenshots/admin1.png)  
+![Admin Manage Classes](screenshots/admin2.png)  
+
+---
+
+## 🛠 Tech Stack
+
+- React.js  
+- Tailwind CSS & DaisyUI  
+- React Router DOM  
+- Axios for API calls  
+- LocalStorage for temporary auth/session state  
+
+---
+
+## ⚡ Backend API Base URL
+
+Base URL: https://fullstackecommers-backend-uerv.onrender.com/api/v1/ *(replace with University Assistant backend URL)*
+
+---
+
+## ✨ Features
+
+- Fully responsive design for desktop & mobile  
+- Role-based authentication (Student / Teacher / Admin)  
+- Students: view upcoming classes, assignments, class tests, download resources, CGPA calculator  
+- Teachers/Admin: add/edit/delete upcoming classes, assignments, tests, routines  
+- Approve next-day classes automatically for notice page  
+- Department-based access control  
+- Centralized notice system  
+
+---
+
+# 1. Clone the frontend repo
+```bash
+git clone https://github.com/ALIM23700/FullstackUniversity_Assistant-Frontend.git
+
+2. Navigate into the project folder
+cd FullstackUniversity_Assistant-Frontend
+
+3. Install dependencies
+npm install
+4. Start the app locally
+npm run dev
+5. Open in browser at
+
+http://localhost:5173/
+
+📁 Project Structure
+
+src/
+├─ app/ → Redux state management & Backend API URL
+├─ components/ → Reusable UI components
+├─ pages/ → Home, Assignment, ClassTest, CGPA, Notice, Admin pages
+App.js → Main router & page rendering
+
+🚀 Future Improvements
+
+Integrate unit and integration tests
+Enhance performance & lazy load images
+Improve admin panel functionality
+Add notifications/email reminders
+Add multilingual support
+
+📄 License
+
+You are free to use, modify, and distribute this project.
