@@ -13,6 +13,29 @@ Supports role-based authentication, viewing upcoming classes, assignments, resou
 
 ---
 
+
+## 🛠 Tech Stack
+
+- React.js  
+- Tailwind CSS & DaisyUI  
+- React Router DOM  
+- Axios for API calls  
+- LocalStorage for temporary auth/session state  
+
+---
+
+## ✨ Features
+
+- Fully responsive design for desktop & mobile  
+- Role-based authentication (Student / Teacher / Admin)  
+- Students: view upcoming classes, assignments, class tests, download resources, CGPA calculator  
+- Teachers/Admin: add/edit/delete upcoming classes, assignments, tests, routines  
+- Approve next-day classes automatically for notice page  
+- Department-based access control  
+- Centralized notice system  
+
+---
+
 ## 📸 Screenshots
 
 ### Home Page
@@ -46,30 +69,6 @@ Supports role-based authentication, viewing upcoming classes, assignments, resou
 ### Admin Dashboard
 ![Admin Overview](screenshots/admin1.png)  
 ![Admin Manage Classes](screenshots/admin2.png)  
-
----
-
-## 🛠 Tech Stack
-
-- React.js  
-- Tailwind CSS & DaisyUI  
-- React Router DOM  
-- Axios for API calls  
-- LocalStorage for temporary auth/session state  
-
----
-
-
-
-## ✨ Features
-
-- Fully responsive design for desktop & mobile  
-- Role-based authentication (Student / Teacher / Admin)  
-- Students: view upcoming classes, assignments, class tests, download resources, CGPA calculator  
-- Teachers/Admin: add/edit/delete upcoming classes, assignments, tests, routines  
-- Approve next-day classes automatically for notice page  
-- Department-based access control  
-- Centralized notice system  
 
 ---
 
