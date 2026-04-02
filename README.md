@@ -74,38 +74,41 @@ Supports role-based authentication, viewing upcoming classes, assignments, resou
 ---
 
 
-### 1. Clone the frontend repo
-```bash
+# 1. Clone the frontend repo
 git clone https://github.com/ALIM23700/FullstackUniversity_Assistant-Frontend.git
 
-2. Navigate into the project folder
-  cd FullstackUniversity_Assistant-Frontend
+# 2. Navigate into the project folder
+cd FullstackUniversity_Assistant-Frontend
 
-3. Install dependencies
-  npm install
-4. Start the app locally
-  npm run dev
-5. Open in browser at
-  http://localhost:5173/
+# 3. Install dependencies
+npm install
+
+# 4. Start the app locally
+npm run dev
+
+# 5. Open in browser at
+http://localhost:5173/
+
 ---
 
-###📁 Project Structure
-   src/
-     ├─ app/ → Redux state management & Backend API URL
-     ├─ components/ → Reusable UI components
-     ├─ pages/ → Home, Assignment, ClassTest, CGPA, Notice, Admin pages
-     App.js → Main router & page rendering
+# 📁 Project Structure
+src/  
+├─ app/ → Redux state management & Backend API URL  
+├─ components/ → Reusable UI components  
+├─ pages/ → Home, Assignment, ClassTest, CGPA, Notice, Admin pages  
+App.js → Main router & page rendering  
+
 ---
 
-###🚀 Future Improvements
+# 🚀 Future Improvements
+- Integrate unit and integration tests  
+- Enhance performance & lazy load images  
+- Improve admin panel functionality  
+- Add notifications/email reminders  
+- Add multilingual support
 
-Integrate unit and integration tests
-Enhance performance & lazy load images
-Improve admin panel functionality
-Add notifications/email reminders
-Add multilingual support
----
+  ---
 
-###📄 License
-
-You are free to use, modify, and distribute this project.
+# 📄 License
+This project is licensed under the MIT License –  
+you are free to use, modify, and distribute this project as you wish.  
