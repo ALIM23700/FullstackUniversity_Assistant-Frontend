@@ -7,6 +7,9 @@ Supports role-based authentication, viewing upcoming classes, assignments, resou
 
 ## 🌐 Live Demo
 [Click here to view the live app](https://fullstack-university-assistant-fron.vercel.app/)
+---
+### ⚙️ Backend
+[Backend Repo](https://github.com/ALIM23700/FullstackEcommers_Backend)
 
 ---
 
@@ -56,11 +59,7 @@ Supports role-based authentication, viewing upcoming classes, assignments, resou
 
 ---
 
-## ⚡ Backend API Base URL
 
-Base URL: https://fullstackecommers-backend-uerv.onrender.com/api/v1/ *(replace with University Assistant backend URL)*
-
----
 
 ## ✨ Features
 
@@ -74,30 +73,29 @@ Base URL: https://fullstackecommers-backend-uerv.onrender.com/api/v1/ *(replace 
 
 ---
 
-# 1. Clone the frontend repo
+
+### 1. Clone the frontend repo
 ```bash
 git clone https://github.com/ALIM23700/FullstackUniversity_Assistant-Frontend.git
 
 2. Navigate into the project folder
-cd FullstackUniversity_Assistant-Frontend
+  cd FullstackUniversity_Assistant-Frontend
 
 3. Install dependencies
-npm install
+  npm install
 4. Start the app locally
-npm run dev
+  npm run dev
 5. Open in browser at
+  http://localhost:5173/
 
-http://localhost:5173/
+###📁 Project Structure
+   src/
+     ├─ app/ → Redux state management & Backend API URL
+     ├─ components/ → Reusable UI components
+     ├─ pages/ → Home, Assignment, ClassTest, CGPA, Notice, Admin pages
+     App.js → Main router & page rendering
 
-#📁 Project Structure
-
-src/
-├─ app/ → Redux state management & Backend API URL
-├─ components/ → Reusable UI components
-├─ pages/ → Home, Assignment, ClassTest, CGPA, Notice, Admin pages
-App.js → Main router & page rendering
-
-#🚀 Future Improvements
+###🚀 Future Improvements
 
 Integrate unit and integration tests
 Enhance performance & lazy load images
@@ -105,6 +103,6 @@ Improve admin panel functionality
 Add notifications/email reminders
 Add multilingual support
 
-#📄 License
+###📄 License
 
 You are free to use, modify, and distribute this project.
