@@ -87,6 +87,7 @@ git clone https://github.com/ALIM23700/FullstackUniversity_Assistant-Frontend.gi
   npm run dev
 5. Open in browser at
   http://localhost:5173/
+---
 
 ###📁 Project Structure
    src/
@@ -94,6 +95,7 @@ git clone https://github.com/ALIM23700/FullstackUniversity_Assistant-Frontend.gi
      ├─ components/ → Reusable UI components
      ├─ pages/ → Home, Assignment, ClassTest, CGPA, Notice, Admin pages
      App.js → Main router & page rendering
+---
 
 ###🚀 Future Improvements
 
@@ -102,6 +104,7 @@ Enhance performance & lazy load images
 Improve admin panel functionality
 Add notifications/email reminders
 Add multilingual support
+---
 
 ###📄 License
 
